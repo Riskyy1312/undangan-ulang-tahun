@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Birthday Wishes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #C3B1E1;
+            --secondary: #9F86C0;
+            --accent: #E6D4F7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" fill="%239F86C0" opacity="0.5"/></svg>'), auto;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #F8F0FF 0%, #E8D6FF 100%);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(159, 134, 192, 0.15);
+            max-width: 600px;
+            width: 90%;
+            margin: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transform: translateY(0);
+            animation: appear 1s ease-out forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes appear {
+            from {
+            opacity: 0;
+            transform: translateY(50px);
+            }
+            to {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+
+        .floating-element {
+            position: absolute;
+            background: var(--accent);
+            opacity: 0.3;
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: -1;
+        }
+
+        h1 {
+            background: linear-gradient(45deg, #7B4C9E, #B28BD1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-shadow: 2px 4px 8px rgba(147, 112, 219, 0.1);
+        }
+
+        .message-box {
+            position: relative;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+
+        .message-box:hover {
+            transform: translateY(-5px) rotateX(5deg) rotateY(-5deg);
+        }
+
+        p {
+            color: #4A345C;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 1rem 0;
+        }
+
+        .sparkles {
+            position: absolute;
+            pointer-events: none;
+            width: 10px;
+            height: 10px;
+            background: #FFF;
+            border-radius: 50%;
+            animation: sparkle 1s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes sparkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; transform: scale(2); }
+            100% { opacity: 0; }
+        }
+
+        .button {
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+            align-self: center;
+            display: block;
+            margin: 25px auto 0;
+            width: fit-content;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(159, 134, 192, 0.3);
+        }
+
+        .button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+
+        .button:hover::after {
+            transform: translateX(100%) rotate(45deg);
+        }
+
+        .particles {
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-element" style="width: 300px; height: 300px; top: -50px; left: -50px;"></div>
+    <div class="floating-element" style="width: 200px; height: 200px; bottom: -30px; right: -30px;"></div>
+
+    <div class="container">
+        <h1>Happy Birthday, Sayangkuu! 🌸</h1>
+        
+        <div class="message-box">
+            <p>🎀 Untuk Cici-ku tersayangg 🎀</p>
+            <p>
+                Selamat ulang tahun yang ke-18 sayangkuu<br>
+                Aku harap kamu bisa bahagia terus sama akuu,<br>
+                Jangan bosen-bosen sama aku ya sayangkuu<br>
+                Semoga kita bisa terus bersama selamanyaa..
+            </p>
+            <p>✨ Semoga kamu bisa bahagia selamanyaa ✨</p>
+        </div>
+
+        <button class="button" id="surpriseBtn">Sentuh akuu</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        // Floating animation
+        gsap.to(".floating-element", {
+            y: 20,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+
+        // Particle effect
+        document.addEventListener('mousemove', (e) => {
+            const particles = document.createElement('div');
+            particles.className = 'particles';
+            particles.style.left = e.clientX + 'px';
+            particles.style.top = e.clientY + 'px';
+            
+            gsap.to(particles, {
+                x: 'random(-50,50)',
+                y: 'random(-50,50)',
+                scale: 'random(0.5,2)',
+                opacity: 0,
+                duration: 1,
+                onComplete: () => particles.remove()
+            });
+            
+            document.body.appendChild(particles);
+        });
+
+        // Surprise button
+        document.getElementById('surpriseBtn').addEventListener('click', () => {
+            const hearts = ['💖', '💝', '💘', '💞', '💗'];
+            for(let i = 0; i < 50; i++) {
+                const heart = document.createElement('div');
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.position = 'fixed';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = Math.random() * 100 + 'vh';
+                heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+                
+                gsap.to(heart, {
+                    y: -100,
+                    opacity: 0,
+                    duration: 2,
+                    ease: "power4.out",
+                    onComplete: () => heart.remove()
+                });
+                
+                document.body.appendChild(heart);
+            }
+            
+            // Animate container
+            gsap.to(".container", {
+                keyframes: [{
+                    y: -10,
+                    duration: 0.2
+                }, {
+                    y: 0,
+                    duration: 0.3
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
